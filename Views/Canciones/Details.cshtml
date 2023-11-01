@@ -1,0 +1,58 @@
+﻿@model DE_ProyectoDF.Models.Cancion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cancion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCancion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCancion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnioLanzamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnioLanzamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compositor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compositor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Album.NombreAlbum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Album.NombreAlbum)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CancionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

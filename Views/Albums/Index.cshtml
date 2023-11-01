@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DE_ProyectoDF.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAlbum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnioLanzamiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumCanciones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artista.NombrePilaArtista)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAlbum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnioLanzamiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumCanciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artista.NombrePilaArtista)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlbumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlbumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlbumID })
+        </td>
+    </tr>
+}
+
+</table>
